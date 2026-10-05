@@ -1,6 +1,11 @@
 --[[
 	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
 ]]
+game:GetService("CoreGui").DescendantAdded:Connect(function(v)
+    if v:IsA("GuiObject") and v.BorderColor3 == Color3.new(1,0,0) then
+        v.BorderColor3 = Color3.new(0/255,0/255,255/255)
+    end
+end)
 local epikservertrollgui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
